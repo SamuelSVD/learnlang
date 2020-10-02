@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Learn Languages!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="center flex-column center-text">
+    <div class="wrapper">
+      <p></p>
+      <div class="center flex-column">
+        <div class="center flex-column rounded square focus">
+          <div id="character" class="large">
+            C
+          </div>
+          <div id="pronunciation" class="small offset italic">
+            p
+          </div>
+          <div id="example" class="small offset italic">
+            e
+          </div>
+        </div>
+        <div class="flex-row">
+          <button onclick="previous()">
+            Prev
+          </button>
+          <button onclick="retry()" disabled>
+            Retry
+          </button>
+          <button onclick="next()">
+            Next
+          </button>
+        </div>
+        <button onclick="revealAnswer()">
+          Reveal Answer
+        </button>
+        <div class="push"></div>
+      </div>
+      <footer>
+        <p>
+          a <a href="https://glitch.com">glitch</a> made by
+          <a href="https://twitter.com/SamuelSVD">SamuelSVD</a>
+          to try to learn new languages
+        </p>
+        <p>
+          inspired by
+          <a href="http://fingerspell.glitch.me/">
+            monica's fingerspell glitch
+          </a>
+          to learn how to read ASL!
+        </p>
+        <p>
+          japanese dictionary and pronunciations grabbed from
+          <a href="http://mylanguages.org/japanese_alphabet.php"
+            >MyLanguages.org</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

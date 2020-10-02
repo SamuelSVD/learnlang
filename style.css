@@ -1,0 +1,77 @@
+/* CSS files add styling rules to your content */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0px 2em;
+  font-family: helvetica;
+  background: #abdbe3;
+  
+}
+p {
+  margin: 2px;
+  text-align: center;
+}
+button {
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #f9f2d4;
+}
+.focus {
+  background: #f9f2d4;
+}
+.rounded {
+  border-radius: 50%;
+}
+.square {
+  width: min(100vmin, 350px);
+  height: min(100vmin, 350px);
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.offset {
+  position: relative;
+  top: -40px;
+}
+.large {
+  font-size: min(100vmin, 200px);
+}
+.small {
+  font-size: 14px;
+}
+.italic {
+  font-style: italic;
+}
+.hidden {
+  color: #f9f2d4;
+  background: #f9f2d4;
+  border-radius: 5px;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer {
+  margin-bottom: 50px;
+}

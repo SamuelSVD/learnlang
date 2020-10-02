@@ -1,0 +1,290 @@
+[
+   {
+      "id":1,
+      "character":"あ",
+      "pronunciation":"a",
+      "example":"as in acute"
+   },
+   {
+      "id":2,
+      "character":"い",
+      "pronunciation":"i",
+      "example":"as in ink"
+   },
+   {
+      "id":3,
+      "character":"う",
+      "pronunciation":"oo",
+      "example":"as in tool"
+   },
+   {
+      "id":4,
+      "character":"え",
+      "pronunciation":"e",
+      "example":"as in elephant"
+   },
+   {
+      "id":5,
+      "character":"お",
+      "pronunciation":"o",
+      "example":"as in Omega"
+   },
+   {
+      "id":6,
+      "character":"は",
+      "pronunciation":"ha",
+      "example":"as in Hanukkah"
+   },
+   {
+      "id":7,
+      "character":"ひ",
+      "pronunciation":"hi",
+      "example":"as in history"
+   },
+   {
+      "id":8,
+      "character":"ふ",
+      "pronunciation":"fu",
+      "example":"as in Fuji"
+   },
+   {
+      "id":9,
+      "character":"へ",
+      "pronunciation":"he",
+      "example":"as in help"
+   },
+   {
+      "id":0,
+      "character":"ほ",
+      "pronunciation":"ho",
+      "example":"as in home"
+   },
+   {
+      "id":1,
+      "character":"か",
+      "pronunciation":"kka",
+      "example":"as in Hanukkah"
+   },
+   {
+      "id":2,
+      "character":"き",
+      "pronunciation":"ki",
+      "example":"as in kiss"
+   },
+   {
+      "id":3,
+      "character":"く",
+      "pronunciation":"ko",
+      "example":"as in cook"
+   },
+   {
+      "id":4,
+      "character":"け",
+      "pronunciation":"ke",
+      "example":"as in kept"
+   },
+   {
+      "id":5,
+      "character":"こ",
+      "pronunciation":"ko",
+      "example":"as in Korea"
+   },
+   {
+      "id":6,
+      "character":"ま",
+      "pronunciation":"ma",
+      "example":"as in machine"
+   },
+   {
+      "id":7,
+      "character":"み",
+      "pronunciation":"mi",
+      "example":"as in ministry"
+   },
+   {
+      "id":8,
+      "character":"む",
+      "pronunciation":"mu",
+      "example":"as in moon"
+   },
+   {
+      "id":9,
+      "character":"め",
+      "pronunciation":"me",
+      "example":"as in melody"
+   },
+   {
+      "id":10,
+      "character":"も",
+      "pronunciation":"mo",
+      "example":"as in Monaco"
+   },
+   {
+      "id":11,
+      "character":"さ",
+      "pronunciation":"sa",
+      "example":"as in sauna"
+   },
+   {
+      "id":12,
+      "character":"し",
+      "pronunciation":"shi",
+      "example":"as in ship"
+   },
+   {
+      "id":13,
+      "character":"す",
+      "pronunciation":"su",
+      "example":"as in Sumatra"
+   },
+   {
+      "id":14,
+      "character":"せ",
+      "pronunciation":"se",
+      "example":"as in Senegal"
+   },
+   {
+      "id":15,
+      "character":"そ",
+      "pronunciation":"so",
+      "example":"as in Somalia"
+   },
+   {
+      "id":16,
+      "character":"や",
+      "pronunciation":"ya",
+      "example":"as in yard"
+   },
+   {
+      "id":17,
+      "character":"ゆ",
+      "pronunciation":"yu",
+      "example":"as in you"
+   },
+   {
+      "id":18,
+      "character":"よ",
+      "pronunciation":"yo",
+      "example":"as in yoga"
+   },
+   {
+      "id":19,
+      "character":"た",
+      "pronunciation":"ta",
+      "example":"as in taught"
+   },
+   {
+      "id":20,
+      "character":"ち",
+      "pronunciation":"chi",
+      "example":"as in chin"
+   },
+   {
+      "id":21,
+      "character":"つ",
+      "pronunciation":"tsu",
+      "example":"as in tsunami"
+   },
+   {
+      "id":22,
+      "character":"て",
+      "pronunciation":"te",
+      "example":"as in telephone"
+   },
+   {
+      "id":23,
+      "character":"と",
+      "pronunciation":"to",
+      "example":"as in Toshiba"
+   },
+   {
+      "id":24,
+      "character":"ら",
+      "pronunciation":"ra",
+      "example":"as in Sahara"
+   },
+   {
+      "id":25,
+      "character":"り",
+      "pronunciation":"ri",
+      "example":"as in ring"
+   },
+   {
+      "id":26,
+      "character":"る",
+      "pronunciation":"ru",
+      "example":"as in ruby"
+   },
+   {
+      "id":27,
+      "character":"れ",
+      "pronunciation":"re",
+      "example":"as in rest"
+   },
+   {
+      "id":28,
+      "character":"ろ",
+      "pronunciation":"ro",
+      "example":"as in Romania"
+   },
+   {
+      "id":29,
+      "character":"な",
+      "pronunciation":"na",
+      "example":"as in knot"
+   },
+   {
+      "id":30,
+      "character":"に",
+      "pronunciation":"ni",
+      "example":"as in knit"
+   },
+   {
+      "id":31,
+      "character":"ぬ",
+      "pronunciation":"nu",
+      "example":"as in nuke"
+   },
+   {
+      "id":32,
+      "character":"ね",
+      "pronunciation":"ne",
+      "example":"as in nest"
+   },
+   {
+      "id":33,
+      "character":"の",
+      "pronunciation":"no",
+      "example":"as in Norway"
+   },
+   {
+      "id":34,
+      "character":"わ",
+      "pronunciation":"wa",
+      "example":"as in Washington"
+   },
+   {
+      "id":35,
+      "character":"ゐ",
+      "pronunciation":"wi",
+      "example":"as in Wii (no longer used)"
+   },
+   {
+      "id":36,
+      "character":"ん",
+      "pronunciation":"n",
+      "example":"as in ton"
+   },
+   {
+      "id":37,
+      "character":"ゑ",
+      "pronunciation":"we",
+      "example":"as in west (no longer used)"
+   },
+   {
+      "id":38,
+      "character":"を",
+      "pronunciation":"wo",
+      "example":"as in wolf"
+   }
+]
