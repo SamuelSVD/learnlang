@@ -1,143 +1,167 @@
 [
    {
+      "id":1,
       "numeric":"-",
       "characters":"数字",
       "pronunciation":"suu ji",
       "english":"numbers"
    },
    {
+      "id":2,
       "numeric":"1",
       "characters":"一",
       "pronunciation":"ichi",
       "english":"one"
    },
    {
+      "id":3,
       "numeric":"2",
       "characters":"ニ",
       "pronunciation":"ni",
       "english":"two"
    },
    {
+      "id":4,
       "numeric":"3",
       "characters":"三",
       "pronunciation":"san",
       "english":"three"
    },
    {
+      "id":5,
       "numeric":"4",
       "characters":"四",
       "pronunciation":"yon",
       "english":"four"
    },
    {
+      "id":6,
       "numeric":"5",
       "characters":"五",
       "pronunciation":"go",
       "english":"five"
    },
    {
+      "id":7,
       "numeric":"6",
       "characters":"六",
       "pronunciation":"roku",
       "english":"six"
    },
    {
+      "id":8,
       "numeric":"7",
       "characters":"七",
       "pronunciation":"nana",
       "english":"seven"
    },
    {
+      "id":9,
       "numeric":"8",
       "characters":"八",
       "pronunciation":"hachi",
       "english":"eight"
    },
    {
+      "id":10,
       "numeric":"9",
       "characters":"九",
       "pronunciation":"kyuu",
       "english":"nine"
    },
    {
+      "id":11,
       "numeric":"10",
       "characters":"十",
       "pronunciation":"juu",
       "english":"ten"
    },
    {
+      "id":12,
       "numeric":"11",
       "characters":"十一",
       "pronunciation":"juu ichi",
       "english":"eleven"
    },
    {
+      "id":13,
       "numeric":"12",
       "characters":"十二",
       "pronunciation":"juu ni",
       "english":"twelve"
    },
    {
+      "id":14,
       "numeric":"13",
       "characters":"十三",
       "pronunciation":"juu san",
       "english":"thirteen"
    },
    {
+      "id":15,
       "numeric":"14",
       "characters":"十四",
       "pronunciation":"juu yon",
       "english":"fourteen"
    },
    {
+      "id":16,
       "numeric":"15",
       "characters":"十五",
       "pronunciation":"juu go",
       "english":"fifteen"
    },
    {
+      "id":17,
       "numeric":"16",
       "characters":"十六",
       "pronunciation":"juu roku",
       "english":"sixteen"
    },
    {
+      "id":18,
       "numeric":"17",
       "characters":"十七",
       "pronunciation":"juu nana",
       "english":"seventeen"
    },
    {
+      "id":19,
       "numeric":"18",
       "characters":"十八",
       "pronunciation":"juu hachi",
       "english":"eighteen"
    },
    {
+      "id":20,
       "numeric":"19",
       "characters":"十九",
       "pronunciation":"juu kyuu",
       "english":"nineteen"
    },
    {
+      "id":21,
       "numeric":"20",
       "characters":"二十",
       "pronunciation":"ni juu",
       "english":"twenty"
    },
    {
+      "id":22,
       "numeric":"100",
       "characters":"百",
       "pronunciation":"hyaku",
       "english":"hundred"
    },
    {
+      "id":23,
       "numeric":"1000",
       "characters":"千",
       "pronunciation":"sen",
       "english":"one thousand"
    },
    {
+      "id":24,
       "numeric":"1000000",
       "characters":"百万",
       "pronunciation":"hyaku man",

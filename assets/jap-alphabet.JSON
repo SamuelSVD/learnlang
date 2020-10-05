@@ -265,24 +265,12 @@
    },
    {
       "id":35,
-      "character":"ゐ",
-      "pronunciation":"wi",
-      "example":"as in Wii (no longer used)"
-   },
-   {
-      "id":36,
       "character":"ん",
       "pronunciation":"n",
       "example":"as in ton"
    },
    {
-      "id":37,
-      "character":"ゑ",
-      "pronunciation":"we",
-      "example":"as in west (no longer used)"
-   },
-   {
-      "id":38,
+      "id":36,
       "character":"を",
       "pronunciation":"wo",
       "example":"as in wolf"
