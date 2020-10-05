@@ -17,32 +17,43 @@
     <div class="wrapper">
       <p></p>
       <div class="center flex-column">
-        <div class="center flex-column rounded square focus">
-          <div id="character" class="large">
-            C
+        <div id="group" class="center flex-column rounded square theme-focus">
+          <div id="main" class="large">
+            
           </div>
-          <div id="pronunciation" class="small offset italic">
-            p
+          <div id="detail1" class="small offset italic">
+            
           </div>
-          <div id="example" class="small offset italic">
-            e
+          <div id="detail2" class="small offset italic">
+            
           </div>
         </div>
         <div class="flex-row">
-          <button onclick="previous()">
+          <button class="theme-focus" onclick="previous()">
             Prev
           </button>
-          <button onclick="retry()" disabled>
+          <button class="theme-focus" onclick="retry()" disabled>
             Retry
           </button>
-          <button onclick="next()">
+          <button class="theme-focus" onclick="next()">
             Next
           </button>
         </div>
-        <button onclick="reveal()">
+        <button class="theme-focus" onclick="reveal()">
           Reveal Answer
         </button>
         <div class="push"></div>
+      </div>
+      <div class="flex flex-column">
+      <select class="theme-focus" name="language" id="language" disabled>
+        <option value="jap">Japanese</option>
+      </select>
+      <select onchange="sectionChange()" class="theme-focus" name="section" id="section">
+        <option value="alphabet">alphabet</option>
+        <option value="numbers">numbers</option>
+        <option value="words" disabled>words</option>
+        <option value="phrases" disabled>phrases</option>
+      </select>
       </div>
       <footer>
         <p>

@@ -1,4 +1,6 @@
+var language = "jap";
 var alphabet = [];
+var numbers = [];
 
 function getRandomListItem(list) {
   return list[Math.floor(Math.random() * list.length)];
@@ -9,15 +11,11 @@ function getNotSoRandomListItem(list, historyList, maxItems) {
     var _item = getRandomListItem(alphabet);
     clean = true;
     if (historyList.length != 0) {
-      if (_item.example.includes("no longer used")) {
-        clean = false;
-      } else {
-        for (var i = 0; i < historyList.length; i++) {
-          var previous_item = historyList[i];
-          if (_item === previous_item) {
-            clean = false;
-            break;
-          }
+      for (var i = 0; i < historyList.length; i++) {
+        var previous_item = historyList[i];
+        if (_item.id === previous_item.id) {
+          clean = false;
+          break;
         }
       }
     }
@@ -35,18 +33,18 @@ function next() {
     char_history.push(item);
     item = getNotSoRandomListItem(alphabet, char_history, history_limit);
     hideAnswer();
-    buildGUI(item);
+    buildCharacterGUI(item);
     item_revealed = false;
   } else {
     history_index -= 1;
     if (history_index > 0) {
       var temp_item = char_history[char_history.length - history_index];
-      buildGUI(temp_item);
+      buildCharacterGUI(temp_item);
     } else {
       if (!item_revealed) {
         hideAnswer();
       }
-      buildGUI(item);
+      buildCharacterGUI(item);
     }
   }
 }
@@ -56,7 +54,7 @@ function previous() {
   if (history_index != 0) {
     var temp_item = char_history[char_history.length - history_index];
     revealAnswer();
-    buildGUI(temp_item);
+    buildCharacterGUI(temp_item);
   }
 }
 function reveal() {
@@ -64,43 +62,63 @@ function reveal() {
   revealAnswer();
 }
 function revealAnswer() {
-  document.getElementById("pronunciation").classList.remove("hidden");
-  document.getElementById("example").classList.remove("hidden");
+  document.getElementById("detail1").classList.remove("hidden");
+  document.getElementById("detail2").classList.remove("hidden");
 }
 function hideAnswer() {
-  document.getElementById("pronunciation").classList.add("hidden");
-  document.getElementById("example").classList.add("hidden");
+  document.getElementById("detail1").classList.add("hidden");
+  document.getElementById("detail2").classList.add("hidden");
 }
-function buildGUI(item) {
-  document.getElementById("character").innerHTML = item.character;
-  document.getElementById("pronunciation").innerHTML = item.pronunciation;
-  document.getElementById("example").innerHTML = item.example;
+function buildCharacterGUI(item) {
+  document.getElementById("main").innerHTML = item.character;
+  document.getElementById("detail1").innerHTML = item.pronunciation;
+  document.getElementById("detail2").innerHTML = item.example;
 }
 function init() {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.onreadystatechange = function() {
-    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-      console.log(alphabet);
-      alphabet = JSON.parse(xmlHttp.responseText);
+  load_lang(language);
+}
+function load_lang(lang) {
+  var alphabetGET = new XMLHttpRequest();
+  alphabetGET.onreadystatechange = function() {
+    if (alphabetGET.readyState == 4 && alphabetGET.status == 200) {
+      alphabet = JSON.parse(alphabetGET.responseText);
       hideAnswer();
       item = getNotSoRandomListItem(alphabet, char_history, history_limit);
-      buildGUI(item);
+      buildCharacterGUI(item);
     }
   };
-  xmlHttp.open(
+  alphabetGET.open(
     "GET",
-    "http://learn-lang.glitch.me/assets/jap-alphabet.JSON",
+    "https://learn-lang.glitch.me/assets/" + lang + "-alphabet.JSON",
     true
   ); // true for asynchronous
-  xmlHttp.send(null);
+  alphabetGET.send(null);
+
+  var numbersGET = new XMLHttpRequest();
+  numbersGET.onreadystatechange = function() {
+    if (numbersGET.readyState == 4 && numbersGET.status == 200) {
+      numbers = JSON.parse(numbersGET.responseText);
+      console.log(numbers);
+    }
+  };
+  numbersGET.open(
+    "GET",
+    "https://learn-lang.glitch.me/assets/" + lang + "-numbers.JSON",
+    true
+  ); // true for asynchronous
+  numbersGET.send(null);
 }
 function recursiveCall(func, delay, level, max_level) {
   if (level < max_level) {
-     setTimeout(function() {
-       func();
-       recursiveCall(func, delay, level + 1, max_level);
-     }, delay);
+    setTimeout(function() {
+      func();
+      recursiveCall(func, delay, level + 1, max_level);
+    }, delay);
   }
+}
+function sectionChange() {
+  var e = document.getElementById("section");
+  console.log(e.options[e.selectedIndex].text);
 }
 var char_history = new Array();
 var history_limit = 10;
@@ -108,5 +126,4 @@ var history_index = 0;
 char_history.length = 0;
 var item = { character: " ", pronunciation: " ", example: " " };
 var item_revealed = false;
-buildGUI(item);
 init();

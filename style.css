@@ -23,9 +23,17 @@ button {
   margin: 4px 30px;
   cursor: pointer;
   border-radius: 5px;
-  background: #f9f2d4;
 }
-.focus {
+select {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.theme-focus {
   background: #f9f2d4;
 }
 .rounded {
