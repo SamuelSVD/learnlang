@@ -1,0 +1,146 @@
+[
+   {
+      "numeric":"-",
+      "characters":"数字",
+      "pronunciation":"suu ji",
+      "english":"numbers"
+   },
+   {
+      "numeric":"1",
+      "characters":"一",
+      "pronunciation":"ichi",
+      "english":"one"
+   },
+   {
+      "numeric":"2",
+      "characters":"ニ",
+      "pronunciation":"ni",
+      "english":"two"
+   },
+   {
+      "numeric":"3",
+      "characters":"三",
+      "pronunciation":"san",
+      "english":"three"
+   },
+   {
+      "numeric":"4",
+      "characters":"四",
+      "pronunciation":"yon",
+      "english":"four"
+   },
+   {
+      "numeric":"5",
+      "characters":"五",
+      "pronunciation":"go",
+      "english":"five"
+   },
+   {
+      "numeric":"6",
+      "characters":"六",
+      "pronunciation":"roku",
+      "english":"six"
+   },
+   {
+      "numeric":"7",
+      "characters":"七",
+      "pronunciation":"nana",
+      "english":"seven"
+   },
+   {
+      "numeric":"8",
+      "characters":"八",
+      "pronunciation":"hachi",
+      "english":"eight"
+   },
+   {
+      "numeric":"9",
+      "characters":"九",
+      "pronunciation":"kyuu",
+      "english":"nine"
+   },
+   {
+      "numeric":"10",
+      "characters":"十",
+      "pronunciation":"juu",
+      "english":"ten"
+   },
+   {
+      "numeric":"11",
+      "characters":"十一",
+      "pronunciation":"juu ichi",
+      "english":"eleven"
+   },
+   {
+      "numeric":"12",
+      "characters":"十二",
+      "pronunciation":"juu ni",
+      "english":"twelve"
+   },
+   {
+      "numeric":"13",
+      "characters":"十三",
+      "pronunciation":"juu san",
+      "english":"thirteen"
+   },
+   {
+      "numeric":"14",
+      "characters":"十四",
+      "pronunciation":"juu yon",
+      "english":"fourteen"
+   },
+   {
+      "numeric":"15",
+      "characters":"十五",
+      "pronunciation":"juu go",
+      "english":"fifteen"
+   },
+   {
+      "numeric":"16",
+      "characters":"十六",
+      "pronunciation":"juu roku",
+      "english":"sixteen"
+   },
+   {
+      "numeric":"17",
+      "characters":"十七",
+      "pronunciation":"juu nana",
+      "english":"seventeen"
+   },
+   {
+      "numeric":"18",
+      "characters":"十八",
+      "pronunciation":"juu hachi",
+      "english":"eighteen"
+   },
+   {
+      "numeric":"19",
+      "characters":"十九",
+      "pronunciation":"juu kyuu",
+      "english":"nineteen"
+   },
+   {
+      "numeric":"20",
+      "characters":"二十",
+      "pronunciation":"ni juu",
+      "english":"twenty"
+   },
+   {
+      "numeric":"100",
+      "characters":"百",
+      "pronunciation":"hyaku",
+      "english":"hundred"
+   },
+   {
+      "numeric":"1000",
+      "characters":"千",
+      "pronunciation":"sen",
+      "english":"one thousand"
+   },
+   {
+      "numeric":"1000000",
+      "characters":"百万",
+      "pronunciation":"hyaku man",
+      "english":"million"
+   }
+]
