@@ -9,6 +9,7 @@ var item = { id: 0, character: " ", pronunciation: " ", example: " " };
 var item_revealed = false;
 
 function resetActive() {
+  item_history = [];
   history_limit = 10;
   history_index = 0;
   item = { id: 0, character: " ", pronunciation: " ", example: " " };
@@ -90,48 +91,54 @@ function buildGUI(item) {
   }
 }
 function buildCharacterGUI(item) {
+  document.getElementById("main").classList.remove("medium");
+  document.getElementById("main").classList.add("large");
+  document.getElementById("detail1").classList.add("offset");
+  document.getElementById("detail2").classList.add("offset");
   document.getElementById("main").innerHTML = item.character;
   document.getElementById("detail1").innerHTML = item.pronunciation;
   document.getElementById("detail2").innerHTML = item.example;
 }
 function buildNumberGUI(item) {
-  console.log(item);
+  document.getElementById("main").classList.remove("large");
+  document.getElementById("main").classList.add("medium");
+  document.getElementById("detail1").classList.remove("offset");
+  document.getElementById("detail2").classList.remove("offset");
   document.getElementById("main").innerHTML = item.characters;
   document.getElementById("detail1").innerHTML = item.pronunciation;
-  document.getElementById("detail2").innerHTML = item.numeric + ':' + item.english;
+  document.getElementById("detail2").innerHTML =
+    item.numeric + ":" + item.english;
 }
 function init() {
   load_lang(language);
 }
+function load_asset(url, outputList, customFunction = null) {
+  var httpGET = new XMLHttpRequest();
+  httpGET.onreadystatechange = function() {
+    if (httpGET.readyState == 4 && httpGET.status == 200) {
+      outputList.push.apply(outputList, JSON.parse(httpGET.responseText));
+      if (customFunction) {
+        customFunction();
+      }
+    }
+  };
+  httpGET.open("GET", url, true); // true for asynchronous
+  httpGET.send(null);
+}
 function load_lang(lang) {
-  var alphabetGET = new XMLHttpRequest();
-  alphabetGET.onreadystatechange = function() {
-    if (alphabetGET.readyState == 4 && alphabetGET.status == 200) {
-      alphabet = JSON.parse(alphabetGET.responseText);
+  load_asset(
+    "https://learn-lang.glitch.me/assets/" + lang + "-alphabet.JSON",
+    alphabet,
+    function() {
       hideAnswer();
       item = getNotSoRandomListItem(alphabet, item_history, history_limit);
       buildGUI(item);
     }
-  };
-  alphabetGET.open(
-    "GET",
-    "https://learn-lang.glitch.me/assets/" + lang + "-alphabet.JSON",
-    true
-  ); // true for asynchronous
-  alphabetGET.send(null);
-
-  var numbersGET = new XMLHttpRequest();
-  numbersGET.onreadystatechange = function() {
-    if (numbersGET.readyState == 4 && numbersGET.status == 200) {
-      numbers = JSON.parse(numbersGET.responseText);
-    }
-  };
-  numbersGET.open(
-    "GET",
+  );
+  load_asset(
     "https://learn-lang.glitch.me/assets/" + lang + "-numbers.JSON",
-    true
-  ); // true for asynchronous
-  numbersGET.send(null);
+    numbers
+  );
 }
 function recursiveCall(func, delay, level, max_level) {
   if (level < max_level) {
@@ -146,6 +153,7 @@ function sectionChange() {
   section = e.options[e.selectedIndex].text;
   resetActive();
   item = getRandomListItem(getActiveList());
+  hideAnswer();
   buildGUI(item);
 }
 function getActiveList() {
