@@ -1,0 +1,38 @@
+[
+	{
+		"description":"Japanese",
+		"value":"jap",
+		"sections":[
+			{
+				"description":"alphabet (Hiragana)",
+				"value":"hiragana",
+				"type":"character",
+				"disabled":false
+			},
+			{
+				"description":"alphabet (Katakana)",
+				"value":"katakana",
+				"type":"character",
+				"disabled":true
+			},
+			{
+				"description":"alphabet (Kanji)",
+				"value":"kanji",
+				"type":"character",
+				"disabled":true
+			},
+			{
+				"description":"numbers",
+				"value":"numbers",
+				"type":"numeric",
+				"disabled":false
+			},
+			{
+				"description":"words",
+				"value":"words",
+				"type":"words",
+				"disabled":false
+			}
+		]
+	}
+]

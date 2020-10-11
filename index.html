@@ -9,9 +9,8 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="./style.css" />
+	<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
-    <!-- import the webpage's javascript file -->
-    <script src="./script.js" defer></script>
   </head>
   <body class="center flex-column center-text">
     <div class="wrapper">
@@ -41,8 +40,7 @@
         <div class="push"></div>
       </div>
       <div class="flex flex-column">
-        <select class="theme-focus" name="language" id="language" disabled>
-          <option value="jap">Japanese</option>
+        <select class="theme-focus" name="language" id="language">
         </select>
         <select
           onchange="sectionChange()"
@@ -70,7 +68,7 @@
           to learn how to read ASL!
         </p>
         <p>
-          japanese dictionary and pronunciations grabbed from
+          japanese dictionary and pronunciations from
           <a href="http://mylanguages.org/japanese_alphabet.php"
             >MyLanguages.org</a
           >
@@ -78,4 +76,10 @@
       </footer>
     </div>
   </body>
+    <!-- import the webpage's javascript file -->
+    <script src="./script-lang.js" defer></script>
+    <script src="./script-obj.js" defer></script>
+    <script src="./script-frontend.js" defer></script>
+    <script src="./script-utils.js" defer></script>
+    <script src="./script.js" defer></script>
 </html>
