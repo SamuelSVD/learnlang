@@ -13,7 +13,7 @@
 				"description":"alphabet (Katakana)",
 				"value":"katakana",
 				"type":"character",
-				"disabled":true
+				"disabled":false
 			},
 			{
 				"description":"alphabet (Kanji)",
