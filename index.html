@@ -17,22 +17,18 @@
     <div class="wrapper">
       <p></p>
       <div class="center flex-column">
-        <div id="group" class="center flex-column rounded square theme-focus">
-          <div id="main" class="large">
-            
-          </div>
-          <div id="detail1" class="small offset italic">
-            
-          </div>
-          <div id="detail2" class="small offset italic">
-            
+        <div id="group" class="center flex-column rounded square theme-focus cn">
+          <div class="inner center flex-column">
+            <div id="main" class="large"></div>
+            <div id="detail1" class="detail offset italic"></div>
+            <div id="detail2" class="detail offset italic"></div>
           </div>
         </div>
         <div class="flex-row">
           <button class="theme-focus" onclick="previous()">
             Prev
           </button>
-          <button class="theme-focus" onclick="retry()" disabled>
+          <button id="retry" class="theme-focus" onclick="retry()">
             Retry
           </button>
           <button class="theme-focus" onclick="next()">
@@ -45,15 +41,20 @@
         <div class="push"></div>
       </div>
       <div class="flex flex-column">
-      <select class="theme-focus" name="language" id="language" disabled>
-        <option value="jap">Japanese</option>
-      </select>
-      <select onchange="sectionChange()" class="theme-focus" name="section" id="section">
-        <option value="alphabet">alphabet</option>
-        <option value="numbers">numbers</option>
-        <option value="words" disabled>words</option>
-        <option value="phrases" disabled>phrases</option>
-      </select>
+        <select class="theme-focus" name="language" id="language" disabled>
+          <option value="jap">Japanese</option>
+        </select>
+        <select
+          onchange="sectionChange()"
+          class="theme-focus"
+          name="section"
+          id="section"
+        >
+          <option value="alphabet">alphabet</option>
+          <option value="numbers">numbers</option>
+          <option value="words">words</option>
+          <option value="phrases" disabled>phrases</option>
+        </select>
       </div>
       <footer>
         <p>

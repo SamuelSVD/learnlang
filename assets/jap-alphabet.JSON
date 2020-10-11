@@ -32,7 +32,7 @@
    {
       "id":6,
       "character":"は",
-      "pronunciation":"ha",
+      "pronunciation":"ha/wa",
       "example":"as in Hanukkah"
    },
    {
@@ -274,5 +274,23 @@
       "character":"を",
       "pronunciation":"wo",
       "example":"as in wolf"
-   }
+   },
+  {
+    "id":37,
+    "character":"ば",
+    "pronunciation":"ba",
+    "example":"as in bat"
+  },
+  {
+    "id":38,
+    "character":"日",
+    "pronunciation":"bi",
+    "example":"as in bee"
+  },
+  {
+    "id":39,
+    "character":"曜",
+    "pronunciation":"yo",
+    "example":"as in yogurt"
+  }
 ]

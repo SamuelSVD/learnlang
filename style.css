@@ -64,9 +64,12 @@ select {
   font-size: min(100vmin, 200px);
 }
 .medium {
-  font-size: min(50vmin, 100px);
+  font-size: min(25vmin, 87px);
 }
 .small {
+  font-size: min(10vmin, 25px);
+}
+.detail {
   font-size: 14px;
 }
 .italic {
@@ -85,4 +88,16 @@ select {
 }
 footer {
   margin-bottom: 50px;
+}
+
+.cn {
+  position: relative;
+  width: min(100vmin, 350px);
+  height: min(100vmin, 350px);
+}
+
+.inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
 }

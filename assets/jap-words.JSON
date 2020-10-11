@@ -2,6 +2,16 @@
    {
       "id":1,
       "characters":"こんにちは",
-      "english":"Good Day / Hello"
-   }
+      "english":"Good Day or Hello"
+   },
+  {
+    "id":2,
+    "characters":"こんばんは",
+    "english":"Good Evening"
+  },
+  {
+    "id":3,
+    "characters":"曜日",
+    "english":"day"
+  }
 ]

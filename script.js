@@ -2,12 +2,18 @@ var language = "jap";
 var section = "alphabet";
 var alphabet = [];
 var numbers = [];
+var words = [];
 var item_history = new Array();
 var history_limit = 10;
 var history_index = 0;
 var item = { id: 0, character: " ", pronunciation: " ", example: " " };
 var item_revealed = false;
-
+var scrap_string = '';
+function getCharItemByCharacter(char) {
+  var c = alphabet.find(element => element.character === char);
+  console.log(c);
+  return c;
+}
 function resetActive() {
   item_history = [];
   history_limit = 10;
@@ -23,7 +29,7 @@ function getNotSoRandomListItem(list, historyList, maxItems) {
   while (!clean) {
     var _item = getRandomListItem(getActiveList());
     clean = true;
-    if (historyList.length != 0) {
+    if ((historyList.length != 0) && (historyList.length < list.length)) {
       for (var i = 0; i < historyList.length; i++) {
         var previous_item = historyList[i];
         if (_item === previous_item) {
@@ -38,13 +44,18 @@ function getNotSoRandomListItem(list, historyList, maxItems) {
   }
   return _item;
 }
+function enableRetry() {
+  document.getElementById("retry").disabled=false;
+}
+function disableRetry() {
+  document.getElementById("retry").disabled=true;
+}
 function retry() {
-  console.log("retry");
+  buildGUI(item);
 }
 function next() {
   if (history_index === 0) {
     item_history.push(item);
-    console.log(item_history);
     item = getNotSoRandomListItem(getActiveList(), item_history, history_limit);
     hideAnswer();
     buildGUI(item);
@@ -88,9 +99,25 @@ function buildGUI(item) {
     buildCharacterGUI(item);
   } else if (section === "numbers") {
     buildNumberGUI(item);
+  } else if (section === "words") {
+    disableRetry();
+    recursiveCall (
+      function(i) {
+        buildCharacterGUI(getCharItemByCharacter(item.characters.charAt(i-1)));
+      },
+      function() {
+        buildWordGUI(item);
+        enableRetry();
+      },
+      1000,
+      1,
+      item.characters.length+1,
+      true
+    )
   }
 }
 function buildCharacterGUI(item) {
+  document.getElementById("main").classList.remove("small");
   document.getElementById("main").classList.remove("medium");
   document.getElementById("main").classList.add("large");
   document.getElementById("detail1").classList.add("offset");
@@ -100,6 +127,7 @@ function buildCharacterGUI(item) {
   document.getElementById("detail2").innerHTML = item.example;
 }
 function buildNumberGUI(item) {
+  document.getElementById("main").classList.remove("small");
   document.getElementById("main").classList.remove("large");
   document.getElementById("main").classList.add("medium");
   document.getElementById("detail1").classList.remove("offset");
@@ -108,6 +136,31 @@ function buildNumberGUI(item) {
   document.getElementById("detail1").innerHTML = item.pronunciation;
   document.getElementById("detail2").innerHTML =
     item.numeric + ":" + item.english;
+}
+function getPronunciationString(word) {
+  var _returnString = '';
+  for (var i = 0; i < word.length; i++) {
+    var _item = getCharItemByCharacter(word.charAt(i));
+    if ((_item) && (i != 0)) {
+      _returnString += '.';
+    }
+    if (_item) {
+      _returnString += _item.pronunciation;
+    } else {
+      _returnString += ' ';
+    }
+  }
+  return _returnString;
+}
+function buildWordGUI(item) {
+  document.getElementById("main").classList.remove("medium");
+  document.getElementById("main").classList.remove("large");
+  document.getElementById("main").classList.add("small");
+  document.getElementById("detail1").classList.remove("offset");
+  document.getElementById("detail2").classList.remove("offset");
+  document.getElementById("main").innerHTML = item.characters;
+  document.getElementById("detail1").innerHTML = getPronunciationString(item.characters);
+  document.getElementById("detail2").innerHTML = item.english;
 }
 function init() {
   load_lang(language);
@@ -139,13 +192,28 @@ function load_lang(lang) {
     "https://learn-lang.glitch.me/assets/" + lang + "-numbers.JSON",
     numbers
   );
+  load_asset(
+    "https://learn-lang.glitch.me/assets/" + lang + "-words.JSON",
+    words
+  );
 }
-function recursiveCall(func, delay, level, max_level) {
+function recursiveCall(func, donefunc, delay, level, max_level, done_on_last) {
   if (level < max_level) {
+    if (func) {
+      func(level);
+    }
     setTimeout(function() {
-      func();
-      recursiveCall(func, delay, level + 1, max_level);
+      recursiveCall(func, donefunc, delay, level + 1, max_level, done_on_last);
     }, delay);
+  } else {
+    if ((done_on_last) && (donefunc)) {
+       donefunc();
+    }
+  }
+  if (((level+1) === max_level) && !done_on_last){
+    if (donefunc) {
+       donefunc();
+    }
   }
 }
 function sectionChange() {
@@ -161,6 +229,8 @@ function getActiveList() {
     return alphabet;
   } else if (section === "numbers") {
     return numbers;
+  } else if (section === "words")  {
+    return words;
   } else {
     return [];
   }
